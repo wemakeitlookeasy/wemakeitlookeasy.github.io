@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOOM-like Game</title>
+    <style>
+        canvas { 
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="640" height="480"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/js-doom@1.0.0/dist/js-doom.min.js"></script>
+    <script>
+        // Initialize the game when the page loads
+        window.onload = function() {
+            const canvas = document.getElementById('gameCanvas');
+            const game = new JSDoom.Game(canvas);
+            game.start();
+        };
+    </script>
+</body>
+</html>
